@@ -7,8 +7,6 @@
   <title>
     JM_Portfolio
   </title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -32,6 +30,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../dist/output.css">
 
 </head>
 
@@ -52,7 +51,7 @@
         <img src="Footer_Images/Jm_Logo.png" id="jmlogo">
       </a>
     </div>
-
+  
     <div class="nav-container">
       <button id="toggle-button">
         <div class="indicator"></div>
@@ -439,24 +438,25 @@
 
     </section>
 
-   <section id="projects" class="w-full py-20 bg-gray-900">
+   <section id="projects" class="w-full py-20 bg-[#111827] px-6 md:px-12">
 
-  <div class="max-w-6xl mx-auto text-center mb-12 px-6">
+  <div class="max-w-6xl mx-auto text-center mb-12">
     <h2 class="text-4xl font-bold text-white">Recent Projects</h2>
     <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
       A collection of web applications and Java programs I've worked on, showcasing interactive UIs, responsive design, and modern frontend technologies.
     </p>
   </div>
 
-  <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto place-items-center">
+  <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
 
-    <div class="card bg-base-100 w-96 shadow-sm flex flex-col h-full">
+    <!-- Card 1: Araw Mo -->
+    <div class="card bg-[#1f2937] w-full shadow-md flex flex-col h-full rounded-xl overflow-hidden">
       <figure>
-        <img src="ProjectsImages/araw-mo.png" alt="Shoes" class="w-full h-52 object-cover rounded-t-md" />
+        <img src="ProjectsImages/araw-mo.png" alt="Araw Mo" class="w-full h-52 object-cover" />
       </figure>
-      <div class="card-body flex flex-col flex-1">
-        <div class="flex justify-between items-center gap-2">
-          <div class="flex gap-2">
+      <div class="card-body flex flex-col flex-1 p-6 gap-3">
+        <div class="flex justify-between items-center gap-2 flex-wrap">
+          <div class="flex gap-2 items-center">
             <div class="avatar">
               <div class="w-9 rounded-md">
                 <img src="ProjectsImages/araw-mo-logo.png" />
@@ -464,70 +464,70 @@
             </div>
             <h2 class="card-title text-white">Araw Mo!</h2>
           </div>
-          <div class="card-actions justify-end">
-            <div class="badge badge-outline bg-[#E34F26] text-white">HTML</div>
-            <div class="badge badge-outline bg-[#1572B6] text-white">CSS</div>
-            <div class="badge badge-outline bg-[#F7DF1E] text-white">JS</div>
+          <div class="flex flex-wrap gap-1">
+            <div class="badge badge-outline bg-[#E34F26] text-white border-none">HTML</div>
+            <div class="badge badge-outline bg-[#1572B6] text-white border-none">CSS</div>
+            <div class="badge badge-outline bg-[#F7DF1E] text-black border-none">JS</div>
           </div>
         </div>
-        <p class="text-sm flex-1">Interactive weather app with 7-day forecasts, dynamic day / night themes, background music, and PWA support. Built with HTML, CSS & JavaScript.</p>
-        <div class="flex gap-3 mt-4">
+        <p class="text-sm text-gray-300 flex-1">Interactive weather app with 7-day forecasts, dynamic day/night themes, background music, and PWA support. Built with HTML, CSS & JavaScript.</p>
+        <div class="flex gap-3 mt-2 flex-wrap">
           <a href="https://araw-mo-weather-app.vercel.app/" target="_blank"
-             class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
+             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
             Live Demo
           </a>
           <a href="https://github.com/tech1uan/ArawMo-Weather-App-" target="_blank"
-             class="border border-[#00eaff] text-[#00eaff] hover:bg-[#00eaff] hover:text-black font-semibold px-4 py-2 rounded-xl transition">
+             class="border border-[#00eaff] text-[#00eaff] font-semibold px-4 py-2 rounded-xl transition hover:bg-[#00eaff] hover:text-black">
             View Code
           </a>
         </div>
       </div>
     </div>
 
-    <div class="card bg-base-100 w-96 shadow-sm flex flex-col h-full">
+    <!-- Card 2: EyeGasto -->
+    <div class="card bg-[#1f2937] w-full shadow-md flex flex-col h-full rounded-xl overflow-hidden">
       <figure>
-        <img src="ProjectsImages/eye-gasto.png" alt="Shoes" class="w-full h-52 object-cover rounded-t-md" />
+        <img src="ProjectsImages/eye-gasto.png" alt="EyeGasto" class="w-full h-52 object-cover" />
       </figure>
-      <div class="card-body flex flex-col flex-1">
-        <div class="flex justify-between items-center gap-2">
-          <div class="flex gap-2">
+      <div class="card-body flex flex-col flex-1 p-6 gap-3">
+        <div class="flex justify-between items-center gap-2 flex-wrap">
+          <div class="flex gap-2 items-center">
             <div class="avatar">
               <div class="w-9 rounded-md">
                 <img src="ProjectsImages/eye-gasto-logo.png" />
               </div>
             </div>
-            <h2 class="card-title text-white text-sm">EyeGasto!</h2>
+            <h2 class="card-title text-white">EyeGasto!</h2>
           </div>
-          <div class="card-actions justify-end">
-            <div class="badge badge-outline bg-[#E34F26] text-white">HTML</div>
-            <div class="badge badge-outline bg-[#1572B6] text-white">Tailwind</div>
-            <div class="badge badge-outline bg-[#F7DF1E] text-white">JS</div>
+          <div class="flex flex-wrap gap-1">
+            <div class="badge badge-outline bg-[#E34F26] text-white border-none">HTML</div>
+            <div class="badge badge-outline bg-[#1572B6] text-white border-none">Tailwind</div>
+            <div class="badge badge-outline bg-[#F7DF1E] text-black border-none">JS</div>
           </div>
         </div>
-        <p class="text-sm flex-1">Responsive expense tracker with balance management and visual spending analytics. Built with HTML, Tailwind & JavaScript.</p>
-        <div class="flex gap-3 mt-4">
+        <p class="text-sm text-gray-300 flex-1">Responsive expense tracker with balance management and visual spending analytics. Built with HTML, Tailwind & JavaScript.</p>
+        <div class="flex gap-3 mt-2 flex-wrap">
           <a href="https://eye-gasto.vercel.app/" target="_blank"
-             class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
+             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
             Live Demo
           </a>
           <a href="https://github.com/tech1uan/EyeGasto-" target="_blank"
-             class="border border-[#00eaff] text-[#00eaff] hover:bg-[#00eaff] hover:text-black font-semibold px-4 py-2 rounded-xl transition">
+             class="border border-[#00eaff] text-[#00eaff] font-semibold px-4 py-2 rounded-xl transition hover:bg-[#00eaff] hover:text-black">
             View Code
           </a>
         </div>
       </div>
     </div>
 
-    
-    <div class="card bg-base-100 w-96 shadow-sm flex flex-col h-full">
-     <div class="w-full flex justify-center">
-  <img src="ProjectsImages/basic-banking-app.png" 
-       alt="Basic Banking App" 
-       class="h-52 object-cover rounded-t-md pt-10" />
-</div>
-      <div class="card-body flex flex-col flex-1">
-        <div class="flex justify-between items-center gap-2">
-          <div class="flex gap-2">
+    <!-- Card 3: Basic Banking App -->
+    <div class="card bg-[#1f2937] w-full shadow-md flex flex-col h-full rounded-xl overflow-hidden">
+      <div class="w-full flex justify-center bg-[#1f2937] pt-8">
+        <img src="ProjectsImages/basic-banking-app.png" alt="Basic Banking App"
+             class="h-44 object-contain" />
+      </div>
+      <div class="card-body flex flex-col flex-1 p-6 gap-3">
+        <div class="flex justify-between items-center gap-2 flex-wrap">
+          <div class="flex gap-2 items-center">
             <div class="avatar">
               <div class="w-9 rounded-md">
                 <img src="ProjectsImages/java.png" />
@@ -535,65 +535,57 @@
             </div>
             <h2 class="card-title text-white text-sm">Basic Banking App</h2>
           </div>
-          <div class="card-actions justify-end">
-             <div class="badge badge-outline bg-[#E34F26] text-white">Java</div>
-             <div class="badge badge-outline bg-[#1572B6] text-white">Swing</div>
+          <div class="flex flex-wrap gap-1">
+            <div class="badge badge-outline bg-[#E34F26] text-white border-none">Java</div>
+            <div class="badge badge-outline bg-[#1572B6] text-white border-none">Swing</div>
           </div>
         </div>
-        <p class="text-sm flex-1">Desktop banking app with MPIN login, balance check, and deposit/withdraw functionality. Built with Java Swing.</p>
-        <div class="flex gap-3 mt-4">
-            <a href="BasicBankApp (JAR)/BasicBankApp.jar" target="_blank"
-        class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
-        Download App
-      </a>
+        <p class="text-sm text-gray-300 flex-1">Desktop banking app with MPIN login, balance check, and deposit/withdraw functionality. Built with Java Swing.</p>
+        <div class="flex gap-3 mt-2 flex-wrap">
+          <a href="BasicBankApp (JAR)/BasicBankApp.jar" target="_blank"
+             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
+            Download App
+          </a>
           <a href="https://github.com/tech1uan/Basic_BankingAPP" target="_blank"
-             class="border border-[#00eaff] text-[#00eaff] hover:bg-[#00eaff] hover:text-black font-semibold px-4 py-2 rounded-xl transition">
+             class="border border-[#00eaff] text-[#00eaff] font-semibold px-4 py-2 rounded-xl transition hover:bg-[#00eaff] hover:text-black">
             View Code
           </a>
         </div>
       </div>
     </div>
 
-<div class="card bg-base-100 w-96 shadow-sm">
-  <div class="flex justify-center">
-    <img src="ProjectsImages/tic-tac-toe.png" alt="Tic Tac Toe"
-         class="w-32 h-32 object-contain rounded-t-md mt-4" />
-  </div>
-  <div class="card-body">
-    <div class="flex justify-between items-center gap-2">
-      <div class="flex gap-2 items-center">
-        <div class="avatar">
-          <div class="w-9 rounded-md">
-            <img src="ProjectsImages/tic-tac-toe-logo.png" />
+    <!-- Card 4: Tic Tac Toe -->
+    <div class="card bg-[#1f2937] w-full shadow-md rounded-xl overflow-hidden">
+      <div class="flex justify-center pt-6">
+        <img src="ProjectsImages/tic-tac-toe.png" alt="Tic Tac Toe"
+             class="w-32 h-32 object-contain" />
+      </div>
+      <div class="card-body p-6 gap-3">
+        <div class="flex justify-between items-center gap-2 flex-wrap">
+          <div class="flex gap-2 items-center">
+            <div class="avatar">
+              <div class="w-9 rounded-md">
+                <img src="ProjectsImages/tic-tac-toe-logo.png" />
+              </div>
+            </div>
+            <h2 class="card-title text-white text-sm">Tic Tac Toe</h2>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            <div class="badge badge-outline bg-[#E34F26] text-white border-none">Java</div>
+            <div class="badge badge-outline bg-[#1572B6] text-white border-none">OOP</div>
+            <div class="badge badge-outline bg-[#F7DF1E] text-black border-none">JavaFX</div>
           </div>
         </div>
-        <h2 class="card-title text-white text-sm">
-          Tic Tac Toe
-        </h2>
-      </div>
-      <div class="card-actions justify-end">
-        <div class="badge badge-outline bg-[#E34F26] text-white">Java</div>
-        <div class="badge badge-outline bg-[#1572B6] text-white">OOP</div>
-        <div class="badge badge-outline bg-[#F7DF1E] text-black">JavaFX</div>
+        <p class="text-sm text-gray-300 mt-2">Desktop Tic Tac Toe game built with Java and OOP concepts. Features Player vs Player and Player vs AI modes with selectable difficulty, background music, and a clean interface.</p>
+        <div class="flex gap-3 mt-2">
+          <a href="https://github.com/tech1uan/1tech_tic-tac-toe-java" target="_blank"
+             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
+            View Code
+          </a>
+        </div>
       </div>
     </div>
 
-    <p class="text-sm mt-2">
-      Desktop Tic Tac Toe game built with Java and OOP concepts. Features Player vs Player and Player vs AI modes with selectable difficulty, background music, and a clean interface.
-    </p>
-
-    <div class="flex gap-3 mt-4">
-      <a href="https://github.com/tech1uan/1tech_tic-tac-toe-java" target="_blank"
-         class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
-        View Code
-      </a>
-
-
-    </div>
-  </div>
-</div>
-
-    
   </div>
 </section>
 
