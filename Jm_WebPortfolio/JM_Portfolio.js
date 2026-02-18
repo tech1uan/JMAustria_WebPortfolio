@@ -23,7 +23,7 @@
 
             AOS.refresh(); 
        }, 1000); 
-   }, 3000);
+   }, 1);
 });
 
 const toggleButton = document.getElementById("toggle-button");

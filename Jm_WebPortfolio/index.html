@@ -7,6 +7,8 @@
   <title>
     JM_Portfolio
   </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4/dist/full.min.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
@@ -30,10 +32,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <!--Loading Interface-->
+
+
   <div id="loader">
     <img src="Footer_Images/Jm_Logo.png" alt="Logo" class="loader-logo">
     <p class="dev_name">Juan Miguel Austria</p>
@@ -158,7 +163,8 @@
           <img src="AboutMeImages/Jm-AboutMePic.jpg">
         </div>
 
-        <div class="Text_Container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000" data-aos-anchor-placement="top">
+        <div class="Text_Container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000"
+          data-aos-anchor-placement="top">
           <h1> ABOUT <span>ME</span></h1> <br>
           <p>Hi, I'm Juan Miguel Austria, a second-year BSIT student with a strong passion for web and software
             development. I'm an aspiring full stack developer who enjoys creating clean, functional, and user-friendly
@@ -433,62 +439,165 @@
 
     </section>
 
-    <section class="projects-section" id="projects">
-      <div class="header-container" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-        <img src="ProjectsImages/software_logo.png" alt="icon">
-        <H1> SOFTWARE & DEVELOPMENT PROJECTS </H1>
-      </div>
+   <section id="projects" class="w-full py-20 bg-gray-900">
 
-      <div class="text1-container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-        <p>Basic Banking Application</p>
-        <br>
-        <p>Java Swing + Eclipse + Windows Builder</p>
-      </div>
+  <div class="max-w-6xl mx-auto text-center mb-12 px-6">
+    <h2 class="text-4xl font-bold text-white">Recent Projects</h2>
+    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+      A collection of web applications and Java programs I've worked on, showcasing interactive UIs, responsive design, and modern frontend technologies.
+    </p>
+  </div>
 
-      <div class="project-flex">
-        <div class="Pic-Text-Container">
-          <div class="Pic-Container">
-            <div class="pic1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-              <img src="ProjectsImages/Pic11.png" alt="pic1">
+  <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto place-items-center">
+
+    <div class="card bg-base-100 w-96 shadow-sm flex flex-col h-full">
+      <figure>
+        <img src="ProjectsImages/araw-mo.png" alt="Shoes" class="w-full h-52 object-cover rounded-t-md" />
+      </figure>
+      <div class="card-body flex flex-col flex-1">
+        <div class="flex justify-between items-center gap-2">
+          <div class="flex gap-2">
+            <div class="avatar">
+              <div class="w-9 rounded-md">
+                <img src="ProjectsImages/araw-mo-logo.png" />
+              </div>
             </div>
-            <div class="pic2" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
-              <img src="ProjectsImages/Pic12.png" alt="pic2">
-            </div>
-            <div class="pic3" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-              <img src="ProjectsImages/Pic13.png" alt="pic3">
-            </div>
+            <h2 class="card-title text-white">Araw Mo!</h2>
           </div>
-          <div class="Description" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-            <p>Swipe for more →</p>
+          <div class="card-actions justify-end">
+            <div class="badge badge-outline bg-[#E34F26] text-white">HTML</div>
+            <div class="badge badge-outline bg-[#1572B6] text-white">CSS</div>
+            <div class="badge badge-outline bg-[#F7DF1E] text-white">JS</div>
           </div>
         </div>
-
-
-
-        <div class="text2-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          <p>Team: <span>JAM</span> Tech | Role: Lead Developer</p>
-          <br>
-          <p>Tools: Java Swing, Eclipse, WindowBuilder (Swing Gui)</p>
-          <p>BSIT 1st Year Final Project - Computer Programming 2 (Java)</p>
-          <br><br>
-          <p>A desktop-based banking application developed as our final project in Computer Programming 2.
-            The Application features an MPIN login (1234) that grants access to a main menu where users
-            can deposit funds, withdraw money, check their balance, or exit the system.
-            The system supports a single hardcoded user account (no database integration yet). I handled
-            the entire application logic, including authentication, transaction handling, and GUI interaction. My
-            teammates contributed
-            to the UI background design ideas and final presentation.
-          </p>
-
-          <div class="Buttons">
-            <a href="https://github.com/jmwanny/Basic_BankingAPP.git" class="btn1" target="_blank">View Source Code</a>
-            <a href="/BasicBankApp (JAR)/BasicBankApp.jar" class="btn2">Download App</a>
-          </div>
-
+        <p class="text-sm flex-1">Interactive weather app with 7-day forecasts, dynamic day / night themes, background music, and PWA support. Built with HTML, CSS & JavaScript.</p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://araw-mo-weather-app.vercel.app/" target="_blank"
+             class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
+            Live Demo
+          </a>
+          <a href="https://github.com/tech1uan/ArawMo-Weather-App-" target="_blank"
+             class="border border-[#00eaff] text-[#00eaff] hover:bg-[#00eaff] hover:text-black font-semibold px-4 py-2 rounded-xl transition">
+            View Code
+          </a>
         </div>
       </div>
-    </section>
+    </div>
 
+    <div class="card bg-base-100 w-96 shadow-sm flex flex-col h-full">
+      <figure>
+        <img src="ProjectsImages/eye-gasto.png" alt="Shoes" class="w-full h-52 object-cover rounded-t-md" />
+      </figure>
+      <div class="card-body flex flex-col flex-1">
+        <div class="flex justify-between items-center gap-2">
+          <div class="flex gap-2">
+            <div class="avatar">
+              <div class="w-9 rounded-md">
+                <img src="ProjectsImages/eye-gasto-logo.png" />
+              </div>
+            </div>
+            <h2 class="card-title text-white text-sm">EyeGasto!</h2>
+          </div>
+          <div class="card-actions justify-end">
+            <div class="badge badge-outline bg-[#E34F26] text-white">HTML</div>
+            <div class="badge badge-outline bg-[#1572B6] text-white">Tailwind</div>
+            <div class="badge badge-outline bg-[#F7DF1E] text-white">JS</div>
+          </div>
+        </div>
+        <p class="text-sm flex-1">Responsive expense tracker with balance management and visual spending analytics. Built with HTML, Tailwind & JavaScript.</p>
+        <div class="flex gap-3 mt-4">
+          <a href="https://eye-gasto.vercel.app/" target="_blank"
+             class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
+            Live Demo
+          </a>
+          <a href="https://github.com/tech1uan/EyeGasto-" target="_blank"
+             class="border border-[#00eaff] text-[#00eaff] hover:bg-[#00eaff] hover:text-black font-semibold px-4 py-2 rounded-xl transition">
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="card bg-base-100 w-96 shadow-sm flex flex-col h-full">
+     <div class="w-full flex justify-center">
+  <img src="ProjectsImages/basic-banking-app.png" 
+       alt="Basic Banking App" 
+       class="h-52 object-cover rounded-t-md pt-10" />
+</div>
+      <div class="card-body flex flex-col flex-1">
+        <div class="flex justify-between items-center gap-2">
+          <div class="flex gap-2">
+            <div class="avatar">
+              <div class="w-9 rounded-md">
+                <img src="ProjectsImages/java.png" />
+              </div>
+            </div>
+            <h2 class="card-title text-white text-sm">Basic Banking App</h2>
+          </div>
+          <div class="card-actions justify-end">
+             <div class="badge badge-outline bg-[#E34F26] text-white">Java</div>
+             <div class="badge badge-outline bg-[#1572B6] text-white">Swing</div>
+          </div>
+        </div>
+        <p class="text-sm flex-1">Desktop banking app with MPIN login, balance check, and deposit/withdraw functionality. Built with Java Swing.</p>
+        <div class="flex gap-3 mt-4">
+            <a href="BasicBankApp (JAR)/BasicBankApp.jar" target="_blank"
+        class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
+        Download App
+      </a>
+          <a href="https://github.com/tech1uan/Basic_BankingAPP" target="_blank"
+             class="border border-[#00eaff] text-[#00eaff] hover:bg-[#00eaff] hover:text-black font-semibold px-4 py-2 rounded-xl transition">
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+<div class="card bg-base-100 w-96 shadow-sm">
+  <div class="flex justify-center">
+    <img src="ProjectsImages/tic-tac-toe.png" alt="Tic Tac Toe"
+         class="w-32 h-32 object-contain rounded-t-md mt-4" />
+  </div>
+  <div class="card-body">
+    <div class="flex justify-between items-center gap-2">
+      <div class="flex gap-2 items-center">
+        <div class="avatar">
+          <div class="w-9 rounded-md">
+            <img src="ProjectsImages/tic-tac-toe-logo.png" />
+          </div>
+        </div>
+        <h2 class="card-title text-white text-sm">
+          Tic Tac Toe
+        </h2>
+      </div>
+      <div class="card-actions justify-end">
+        <div class="badge badge-outline bg-[#E34F26] text-white">Java</div>
+        <div class="badge badge-outline bg-[#1572B6] text-white">OOP</div>
+        <div class="badge badge-outline bg-[#F7DF1E] text-black">JavaFX</div>
+      </div>
+    </div>
+
+    <p class="text-sm mt-2">
+      Desktop Tic Tac Toe game built with Java and OOP concepts. Features Player vs Player and Player vs AI modes with selectable difficulty, background music, and a clean interface.
+    </p>
+
+    <div class="flex gap-3 mt-4">
+      <a href="https://github.com/tech1uan/1tech_tic-tac-toe-java" target="_blank"
+         class="bg-[#00eaff] hover:bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition">
+        View Code
+      </a>
+
+
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+</section>
+
+ 
     <section class="vproj-section">
       <div class="head-flex-container">
         <div class="head-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">

@@ -133,10 +133,9 @@
 }
 
 .name-text {
-  color: white;
+  color: white; 
   padding: 15px 0px 15px 15px;
   font-size: clamp(2.8rem, 4.2vw, 4.5rem);
-
 }
 
 .description-container {
