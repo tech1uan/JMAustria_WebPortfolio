@@ -1,587 +1,429 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>
-    JM_Portfolio
-  </title>
-  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="JM Austria" />
-  <link rel="manifest" href="site.webmanifest" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>JM_Portfolio</title>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/general.css">
-  <link rel="stylesheet" href="styles/header.css">
-  <link rel="stylesheet" href="styles/home-section.css">
-  <link rel="stylesheet" href="styles/about-me.css">
-  <link rel="stylesheet" href="styles/skills.css">
-  <link rel="stylesheet" href="styles/projects.css">
-  <link rel="stylesheet" href="styles/education.css">
-  <link rel="stylesheet" href="styles/certificates.css">
-  <link rel="stylesheet" href="styles/contact-me.css">
-  <link rel="stylesheet" href="styles/footer.css">
-  <link rel="stylesheet" href="styles/toggle-darklight.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="dist/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/output.css">;
+  <link rel="stylesheet" href="styles.css">
 
+ 
+   
 </head>
-
 <body>
-  <!--Loading Interface-->
 
-
-  <div id="loader">
-    <img src="Footer_Images/Jm_Logo.png" alt="Logo" class="loader-logo">
-    <p class="dev_name">Juan Miguel Austria</p>
-    <p class="mydescription">Developer | In Progress</p>
-    <div class="loading-line"></div>
+<header class="Header1" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
+  <div class="logo">
+    <a href=""><img src="Footer_Images/Jm_Logo.png" id="jmlogo"></a>
   </div>
+  <div class="nav-container" style="display:flex;align-items:center;gap:1.5rem;">
+    <button id="toggle-button">
+      <div class="indicator"></div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="feather" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1112.79 3 7 7 0 0021 12.79z"/></svg>
+    </button>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#contact-me">Contact Me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <header class="Header1" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
-    <div class="logo">
-      <a href="">
-        <img src="Footer_Images/Jm_Logo.png" id="jmlogo">
-      </a>
-    </div>
-  
-    <div class="nav-container">
-      <button id="toggle-button">
-        <div class="indicator"></div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-          stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
-          <circle cx="12" cy="12" r="5" />
-          <line x1="12" y1="1" x2="12" y2="4" />
-          <line x1="12" y1="20" x2="12" y2="23" />
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-          <line x1="1" y1="12" x2="4" y2="12" />
-          <line x1="20" y1="12" x2="23" y2="12" />
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" class="feather" viewBox="0 0 24 24">
-          <path d="M21 12.79A9 9 0 1112.79 3 7 7 0 0021 12.79z" />
-        </svg>
-      </button>
-      <input type="checkbox" id="menu-toggle" class="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <nav class="main-nav" id="mainNav">
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about-me">About Me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#contact-me">Contact Me</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <!--Welcome Section -->
-    <section class="intro-section-container" id="home">
-      <div id="notif" class="notif hidden">🌞 Light mode coming soon!</div>
-      <div class="hero-grid-container">
-        <div class="hero-text-container">
-          <div class="greet-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000"
-            data-aos-anchor-placement="top">
-            <div class="greeting-container">
-              <p class="greeting-text">
-                Hello, I'm
-              </p>
-            </div>
-            <div class="tech-line-container">
-              <img class="tech-line" src="HomeSection_Images/futuristicline.png" alt="Tech Line">
-            </div>
-          </div>
-          <div class="name-container" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000"
-            data-aos-anchor-placement="top">
-            <h1 class="name-text">MIGUEL</h1>
-          </div>
-          <div class="description-container" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000"
-            data-aos-anchor-placement="top">
-            <p class="description-text">
-              BSIT Student | Aspiring Web <span class="Developer">Developer</span>
-            </p>
-          </div>
-          <div class="cv-container" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000"
-            data-aos-anchor-placement="top">
-            <a class="cv-button" href="Docs/JM_Austria_CV_Coming_Soon.pdf" download target="_blank">Download CV</a>
-          </div>
-          <div class="socials">
-            <div class="socials-text-container" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"
-              data-aos-anchor-placement="top">
-              <p class="socials-text">
-                my socials
-              </p>
-            </div>
-            <div class="socials-image-container" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000"
-              data-aos-anchor-placement="top">
-              <a href="https://www.facebook.com/juanmiguel.austria.5" target="_blank">
-                <img class="Facebook1" src="Contact_Images/fb.gif">
-              </a>
-              <a href="https://www.instagram.com/astrwnnyy_?igsh=MXZoOGdoeWI2bDY3dA==" target="_blank">
-                <img class="Instagram1" src="Contact_Images/instag.gif">
-              </a>
-              <a href="https://github.com/jmwanny" target="_blank">
-                <img class="Github1" src="Contact_Images/github.gif">
-              </a>
-              <a href="https://x.com/wannytw_?t=wLo57epXozGlmD5AhHULHQ&s=09" target="_blank">
-                <img class="X1" src="Contact_Images/X.gif">
-              </a>
-              <a href="https://www.linkedin.com/in/juan-miguel-austria-917583375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-                target="_blank">
-                <img class="LinkedIn1" src="Contact_Images/linkedin.gif">
-              </a>
-            </div>
-          </div>
+<main>
+
+<section class="intro-section-container" id="home">
+  <div id="notif" class="notif hidden">🌞 Light mode coming soon!</div>
+  <div class="hero-grid-container">
+    <div class="hero-text-container flex flex-col gap-5">
+      <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+        <p class="greeting-text">Hello, I'm</p>
+        <img class="tech-line" src="HomeSection_Images/futuristicline.png" alt="Tech Line">
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+        <h1 class="name-text" style="color:white;">MIGUEL</h1>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+        <p class="description-text">BSIT Student | Aspiring Web <span class="Developer">Developer</span></p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000" style="padding-top:1rem;">
+        <a class="inline-block border-2 p-4 rounded-md font-semibold text-sm transition-all duration-150 hover:text-black hover:font-bold"
+           style="border-color:var(--cyan);color:var(--cyan);"
+           onmouseover="this.style.background='var(--cyan)'"
+           onmouseout="this.style.background='transparent'"
+           href="Docs/JM_Austria_CV_Coming_Soon.pdf" download target="_blank">Download CV</a>
+      </div>
+      <div class="socials flex flex-col gap-2" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+        <p style="font-size:0.75rem;color:#6b7280;letter-spacing:0.15em;text-transform:uppercase;">my socials</p>
+        <div class="socials-image-container">
+          <a href="https://www.facebook.com/juanmiguel.austria.5" target="_blank"><img src="Contact_Images/fb.gif"></a>
+          <a href="https://www.instagram.com/astrwnnyy_?igsh=MXZoOGdoeWI2bDY3dA==" target="_blank"><img src="Contact_Images/instag.gif"></a>
+          <a href="https://github.com/jmwanny" target="_blank"><img src="Contact_Images/github.gif"></a>
+          <a href="https://x.com/wannytw_?t=wLo57epXozGlmD5AhHULHQ&s=09" target="_blank"><img src="Contact_Images/X.gif"></a>
+          <a href="https://www.linkedin.com/in/juan-miguel-austria-917583375" target="_blank"><img src="Contact_Images/linkedin.gif"></a>
         </div>
-        <div class="hero-image-container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000"
-          data-aos-anchor-placement="top">
-          <div class="rotating-border"></div>
-          <img class="hero-image" src="HomeSection_Images/jm.png" alt="Hero Image">
+      </div>
+    </div>
+    <div class="hero-image-container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+      <div class="rotating-border"></div>
+      <img class="hero-image" src="HomeSection_Images/jm.png" alt="Hero Image">
+    </div>
+  </div>
+</section>
+
+<section class="About-Me py-28 px-8" id="about-me">
+  <div class="About-Me-Container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+    <div class="Pic2_Container">
+      <img src="AboutMeImages/Jm-AboutMePic.jpg">
+    </div>
+    <div class="Text_Container flex flex-col gap-4" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+      <h1>ABOUT <span>ME</span></h1>
+      <p>Hi, I'm Juan Miguel Austria, a second-year BSIT student with a strong passion for web and software development. I'm an aspiring full stack developer who enjoys creating clean, functional, and user-friendly digital experiences. I'm always eager to learn, improve my craft, and work on meaningful projects that solve real-world problems. My goal is to become a well-rounded developer and contribute to impactful tech solutions.</p>
+      <h2>Let's <span>BUILD</span> something that matters.</h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-24 px-4" id="skills">
+  <span class="section-tag">Portfolio</span>
+  <h1 class="section-h1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">SKILLS</h1>
+  <div class="cyan-line"></div>
+  <p class="text-center text-gray-600 text-xs tracking-widest mb-10">CLICK ANY BADGE TO INSPECT</p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+
+    <div class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 flex flex-col gap-4" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#00eaff] inline-block"></span>
+        <span class="text-[#00eaff] text-xs font-bold tracking-widest uppercase">Programming Languages</span>
+      </div>
+      <div class="h-px bg-[#30363d]"></div>
+      <div class="flex flex-col gap-3">
+
+        <div class="relative flex">
+          <input type="checkbox" id="t1">
+          <label for="t1" class="wrap1 flex items-center gap-3 justify-between w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/c++.png" class="logo-img" alt="C++">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">4</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">C++</span>
+            </div>
+            <span class="text-white text-sm font-semibold">C++</span>
+          </label>
+        </div>
+
+        <div class="relative flex">
+          <input type="checkbox" id="t2">
+          <label for="t2" class="wrap2 flex items-center gap-3  justify-between w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/java.png" class="logo-img" alt="Java">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 "  style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">4</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Java</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Java</span>
+          </label>
+        </div>
+
+        <div class="relative flex">
+          <input type="checkbox" id="t3">
+          <label for="t3" class="wrap3 flex items-center  justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/js.png" class="logo-img" alt="JavaScript">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">3</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">JavaScript</span>
+            </div>
+            <span class="text-white text-sm font-semibold">JavaScript</span>
+          </label>
         </div>
 
       </div>
-    </section>
+    </div>
 
-
-
-    <section class="About-Me" id="about-me">
-      <div class="About-Me-Container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-        <div class="Pic2_Container">
-          <img src="AboutMeImages/Jm-AboutMePic.jpg">
-        </div>
-
-        <div class="Text_Container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000"
-          data-aos-anchor-placement="top">
-          <h1> ABOUT <span>ME</span></h1> <br>
-          <p>Hi, I'm Juan Miguel Austria, a second-year BSIT student with a strong passion for web and software
-            development. I'm an aspiring full stack developer who enjoys creating clean, functional, and user-friendly
-            digital
-            experiences. I'm always eager to learn, improve my craft, and work on meaningful projects that
-            solve real-world problems. My goal is to become a well-rounded developer and contribute to impactful tech
-            solutions.
-          </p>
-          <br> <br>
-          <div class="text-with-logo">
-            <h2> Let's <span>BUILD</span> something that matters.</h2>
-          </div>
-        </div>
+    <div class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 flex flex-col gap-4" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#00eaff] inline-block"></span>
+        <span class="text-[#00eaff] text-xs font-bold tracking-widest uppercase">Web Technologies</span>
       </div>
+      <div class="h-px bg-[#30363d]"></div>
+      <div class="flex flex-col gap-3">
 
-
-    </section>
-
-    <section class="Skills" id="skills">
-      <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">SKILLS</h1>
-
-
-      <div class="PL_Container">
-        <div class="Pic1" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
-
-          <p>Programming Languages</p>
-          <div class="img-container-column">
-            <input type="checkbox" id="logoToggle">
-            <label for="logoToggle" class="logo-wrapper">
-              <img src="SkillsImages/c++.png" title="C++">
-              <div class=four-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">4</span>
-                </div>
-                <div class="img1aname">C++</div>
-              </div>
-            </label>
-
-
-            <input type="checkbox" id="logoToggle2">
-            <label for="logoToggle2" class="logo-wrapper2">
-              <img src="SkillsImages/java.png" title="Java">
-              <div class=four-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">4</span>
-                </div>
-
-
-                <div class="img1bname">Java</div>
-              </div>
-            </label>
-
-
-            <input type="checkbox" id="logoToggle3">
-            <label for="logoToggle3" class="logo-wrapper3">
-              <img id="js" src="SkillsImages/js.png" title="JavaScript">
-              <div class=three-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">3</span>
-                </div>
-
-                <div class="img1cname">JavaScript</div>
-              </div>
-            </label>
-
-          </div>
-
+        <div class="relative flex">
+          <input type="checkbox" id="t4">
+          <label for="t4" class="wrap4 flex items-center justify-between  gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/html.png" class="logo-img" alt="HTML">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">4</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">HTML</span>
+            </div>
+            <span class="text-white text-sm font-semibold">HTML</span>
+          </label>
         </div>
 
-        <div class="Pic2" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="1000">
-          <p>Web Technologies</p>
-          <div class="img-container-column">
-            <input type="checkbox" id="logoToggle4">
-            <label for="logoToggle4" class="logo-wrapper4">
-              <img src="SkillsImages/html.png" title="HTML">
-              <div class=four-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">4</span>
-                </div>
-
-
-                <div class="img2aname">HTML</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle5">
-            <label for="logoToggle5" class="logo-wrapper5">
-              <img src="SkillsImages/css.png" title="CSS">
-              <div class=four-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">4</span>
-                </div>
-
-
-                <div class="img2bname">CSS</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle6">
-            <label for="logoToggle6" class="logo-wrapper6">
-              <img src="SkillsImages/js.png" title="JavaScript">
-              <div class=three-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">3</span>
-                </div>
-                <div class="img2cname">JavaScript</div>
-              </div>
-            </label>
-          </div>
+        <div class="relative flex">
+          <input type="checkbox" id="t5">
+          <label for="t5" class="wrap5 flex items-center  justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/css.png" class="logo-img" alt="CSS">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">4</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">CSS</span>
+            </div>
+            <span class="text-white text-sm font-semibold">CSS</span>
+          </label>
         </div>
 
-        <div class="Pic3" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
-          <p>Design & Editing Tools</p>
-          <div class="img-container-row">
-            <input type="checkbox" id="logoToggle7">
-            <label for="logoToggle7" class="logo-wrapper7">
-              <img src="SkillsImages/canva.png" title="Canva">
-              <div class=four-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">4</span>
-                </div>
-
-
-                <div class="img3aname">Canva</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle8">
-            <label for="logoToggle8" class="logo-wrapper8">
-              <img src="SkillsImages/capcut.png" title="Capcut">
-              <div class=five-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">5</span>
-                </div>
-
-                <div class="img3bname">Capcut</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle9">
-            <label for="logoToggle9" class="logo-wrapper9">
-              <img src="SkillsImages/Photoshop.png" title="Photoshop">
-              <div class=two-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">2</span>
-                </div>
-                <div class="img3cname">Photoshop</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle10">
-            <label for="logoToggle10" class="logo-wrapper10">
-              <img src="SkillsImages/Figma.png" title="Figma">
-              <div class=three-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">3</span>
-                </div>
-                <div class="img3dname">Figma</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle11">
-            <label for="logoToggle11" class="logo-wrapper11">
-              <img src="SkillsImages/Illustrator.png" title="Illustrator">
-              <div class=two-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">2</span>
-                </div>
-                <div class="img3ename">Illustrator</div>
-              </div>
-            </label>
-          </div>
-
-        </div>
-        <div class="Pic4" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
-          <p>Development Tools / IDEs</p>
-          <div class="img-container-row">
-            <input type="checkbox" id="logoToggle12">
-            <label for="logoToggle12" class="logo-wrapper12">
-              <img src="SkillsImages/eclipse.png" title="Eclipse">
-              <div class=five-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">5</span>
-                </div>
-                <div class="img4aname">Eclipse</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle13">
-            <label for="logoToggle13" class="logo-wrapper13">
-              <img src="SkillsImages/vscode.png" title="VsCode">
-              <div class=five-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">5</span>
-                </div>
-                <div class="img4bname">VsCode</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle14">
-            <label for="logoToggle14" class="logo-wrapper14">
-              <img src="SkillsImages/codeblocks.png" title="Codeblocks">
-              <div class=five-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">5</span>
-                </div>
-                <div class="img4cname">Codeblocks</div>
-              </div>
-            </label>
-            <input type="checkbox" id="logoToggle15">
-            <label for="logoToggle15" class="logo-wrapper15">
-              <img src="SkillsImages/intellij.png" title="Intellij IDEA">
-              <div class=five-star-ratings>
-                <div class="stars">
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="star filled">&#9733;</span>
-                  <span class="starcount">5</span>
-                </div>
-                <div class="img4dname">Intellij IDEA</div>
-              </div>
-            </label>
-          </div>
+        <div class="relative flex">
+          <input type="checkbox" id="t6">
+          <label for="t6" class="wrap6 flex items-center  justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/js.png" class="logo-img" alt="JavaScript">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">3</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">JavaScript</span>
+            </div>
+            <span class="text-white text-sm font-semibold">JavaScript</span>
+          </label>
         </div>
 
-    </section>
+      </div>
+    </div>
 
-   <section id="projects" class="w-full py-20 bg-[#111827] px-6 md:px-12">
+    <div class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 flex flex-col gap-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#00eaff] inline-block"></span>
+        <span class="text-[#00eaff] text-xs font-bold tracking-widest uppercase">Design & Editing</span>
+      </div>
+      <div class="h-px bg-[#30363d]"></div>
+      <div class="flex flex-col gap-3">
 
-  <div class="max-w-6xl mx-auto text-center mb-12">
-    <h2 class="text-4xl font-bold text-white">Recent Projects</h2>
-    <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
-      A collection of web applications and Java programs I've worked on, showcasing interactive UIs, responsive design, and modern frontend technologies.
-    </p>
+        <div class="relative flex"><input type="checkbox" id="t7">
+          <label for="t7" class="wrap7 flex items-center  justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/canva.png" class="logo-img" alt="Canva">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">4</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Canva</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Canva</span>
+          </label>
+        </div>
+
+        <div class="relative flex"><input type="checkbox" id="t8">
+          <label for="t8" class="wrap8 flex items-center  justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/capcut.png" class="logo-img" alt="Capcut">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">5</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Capcut</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Capcut</span>
+          </label>
+        </div>
+
+        <div class="relative flex  items-center "><input type="checkbox" id="t9">
+          <label for="t9" class="wrap9 flex items-center justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/Photoshop.png" class="logo-img" alt="Photoshop">
+            <div class="flex flex-col items-center flex-1 absolute left-16 bottom-1 transition-all ease-in" style=" min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star-count">2</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Photoshop</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Photoshop</span>
+          </label>
+        </div>
+
+        <div class="relative flex"><input type="checkbox" id="t10">
+          <label for="t10" class="wrap10 flex items-center  justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/Figma.png" class="logo-img" alt="Figma">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">3</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Figma</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Figma</span>
+          </label>
+        </div>
+
+        <div class="relative flex"><input type="checkbox" id="t11">
+          <label for="t11" class="wrap11 flex items-center  justify-between gap-3 w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/Illustrator.png" class="logo-img" alt="Illustrator">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star-count">2</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Illustrator</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Illustrator</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bg-[#161b22] border border-[#30363d] rounded-2xl p-6 flex flex-col gap-4" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-[#00eaff] inline-block"></span>
+        <span class="text-[#00eaff] text-xs font-bold tracking-widest uppercase">Dev Tools / IDEs</span>
+      </div>
+      <div class="h-px bg-[#30363d]"></div>
+      <div class="flex flex-col gap-3">
+
+        <div class="relative flex"><input type="checkbox" id="t12">
+          <label for="t12" class="wrap12 flex items-center gap-3 justify-between  w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/eclipse.png" class="logo-img" alt="Eclipse">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">5</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Eclipse</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Eclipse</span>
+          </label>
+        </div>
+
+        <div class="relative flex"><input type="checkbox" id="t13">
+          <label for="t13" class="wrap13 flex items-center gap-3  justify-between  w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/vscode.png" class="logo-img" alt="VSCode">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">5</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">VSCode</span>
+            </div>
+            <span class="text-white text-sm font-semibold">VSCode</span>
+          </label>
+        </div>
+
+        <div class="relative flex"><input type="checkbox" id="t14">
+          <label for="t14" class="wrap14 flex items-center gap-3  justify-between w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/codeblocks.png" class="logo-img" alt="Codeblocks">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">5</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">Codeblocks</span>
+            </div>
+            <span class="text-white text-sm font-semibold">Codeblocks</span>
+          </label>
+        </div>
+
+        <div class="relative flex"><input type="checkbox" id="t15">
+          <label for="t15" class="wrap15 flex items-center gap-3 justify-between  w-full bg-[#0d1117] border border-[#30363d] rounded-xl px-3 py-2 cursor-pointer transition-all duration-300 hover:border-[#00eaff44]">
+            <img src="SkillsImages/intellij.png" class="logo-img" alt="IntelliJ">
+            <div class="flex flex-col items-start flex-1 absolute left-16 bottom-1 " style="min-height:48px;">
+              <div class="star-row items-center gap-px"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star-count">5</span></div>
+              <span class="skill-label text-[11px] text-gray-400 mt-1">IntelliJ IDEA</span>
+            </div>
+            <span class="text-white text-sm font-semibold">IntelliJ IDEA</span>
+          </label>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects" class="py-24 px-4 flex flex-col items-center gap-12">
+  <div class="text-center max-w-2xl">
+    <span class="section-tag">Portfolio</span>
+    <h2 class="section-h1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Recent Projects</h2>
+    <div class="cyan-line"></div>
+    <p class="text-gray-400 text-sm leading-relaxed">A collection of web applications and Java programs I've worked on, showcasing interactive UIs, responsive design, and modern frontend technologies.</p>
   </div>
 
-  <div class="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto">
+  <div class="grid gap-8 justify-center w-full max-w-5xl" style="grid-template-columns:repeat(auto-fit,minmax(260px,319px))">
 
-    <!-- Card 1: Araw Mo -->
-    <div class="card bg-[#1f2937] w-full shadow-md flex flex-col h-full rounded-xl overflow-hidden">
-      <figure>
-        <img src="ProjectsImages/araw-mo.png" alt="Araw Mo" class="w-full h-52 object-cover" />
-      </figure>
-      <div class="card-body flex flex-col flex-1 p-6 gap-3">
+    <div class="bg-[#1f2937] flex flex-col rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <img src="ProjectsImages/araw-mo.png" alt="Araw Mo" class="w-full h-52 object-cover"/>
+      <div class="flex flex-col flex-1 gap-3 p-5">
         <div class="flex justify-between items-center gap-2 flex-wrap">
-          <div class="flex gap-2 items-center">
-            <div class="avatar">
-              <div class="w-9 rounded-md">
-                <img src="ProjectsImages/araw-mo-logo.png" />
-              </div>
-            </div>
-            <h2 class="card-title text-white">Araw Mo!</h2>
+          <div class="flex items-center gap-2">
+            <img src="ProjectsImages/araw-mo-logo.png" class="w-9 h-9 rounded-md object-cover">
+            <h2 class="text-white font-bold">Araw Mo!</h2>
           </div>
           <div class="flex flex-wrap gap-1">
-            <div class="badge badge-outline bg-[#E34F26] text-white border-none">HTML</div>
-            <div class="badge badge-outline bg-[#1572B6] text-white border-none">CSS</div>
-            <div class="badge badge-outline bg-[#F7DF1E] text-black border-none">JS</div>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#E34F26] text-white">HTML</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#1572B6] text-white">CSS</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#F7DF1E] text-black">JS</span>
           </div>
         </div>
         <p class="text-sm text-gray-300 flex-1">Interactive weather app with 7-day forecasts, dynamic day/night themes, background music, and PWA support. Built with HTML, CSS & JavaScript.</p>
-        <div class="flex gap-3 mt-2 flex-wrap">
-          <a href="https://araw-mo-weather-app.vercel.app/" target="_blank"
-             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
-            Live Demo
-          </a>
-          <a href="https://github.com/tech1uan/ArawMo-Weather-App-" target="_blank"
-             class="border border-[#00eaff] text-[#00eaff] font-semibold px-4 py-2 rounded-xl transition hover:bg-[#00eaff] hover:text-black">
-            View Code
-          </a>
+        <div class="flex gap-3 flex-wrap mt-2">
+          <a href="https://araw-mo-weather-app.vercel.app/" target="_blank" class="text-sm font-semibold px-4 py-2 rounded-xl transition hover:opacity-80" style="background:var(--cyan);color:black;">Live Demo</a>
+          <a href="https://github.com/tech1uan/ArawMo-Weather-App-" target="_blank" class="text-sm font-semibold px-4 py-2 rounded-xl transition hover:text-black" style="border:1px solid var(--cyan);color:var(--cyan);" onmouseover="this.style.background='var(--cyan)'" onmouseout="this.style.background='transparent'">View Code</a>
         </div>
       </div>
     </div>
 
-    <!-- Card 2: EyeGasto -->
-    <div class="card bg-[#1f2937] w-full shadow-md flex flex-col h-full rounded-xl overflow-hidden">
-      <figure>
-        <img src="ProjectsImages/eye-gasto.png" alt="EyeGasto" class="w-full h-52 object-cover" />
-      </figure>
-      <div class="card-body flex flex-col flex-1 p-6 gap-3">
+    <div class="bg-[#1f2937] flex flex-col rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+      <img src="ProjectsImages/eye-gasto.png" alt="EyeGasto" class="w-full h-52 object-cover"/>
+      <div class="flex flex-col flex-1 gap-3 p-5">
         <div class="flex justify-between items-center gap-2 flex-wrap">
-          <div class="flex gap-2 items-center">
-            <div class="avatar">
-              <div class="w-9 rounded-md">
-                <img src="ProjectsImages/eye-gasto-logo.png" />
-              </div>
-            </div>
-            <h2 class="card-title text-white">EyeGasto!</h2>
+          <div class="flex items-center gap-2">
+            <img src="ProjectsImages/eye-gasto-logo.png" class="w-9 h-9 rounded-md object-cover">
+            <h2 class="text-white font-bold">EyeGasto!</h2>
           </div>
           <div class="flex flex-wrap gap-1">
-            <div class="badge badge-outline bg-[#E34F26] text-white border-none">HTML</div>
-            <div class="badge badge-outline bg-[#1572B6] text-white border-none">Tailwind</div>
-            <div class="badge badge-outline bg-[#F7DF1E] text-black border-none">JS</div>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#E34F26] text-white">HTML</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#1572B6] text-white">Tailwind</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#F7DF1E] text-black">JS</span>
           </div>
         </div>
         <p class="text-sm text-gray-300 flex-1">Responsive expense tracker with balance management and visual spending analytics. Built with HTML, Tailwind & JavaScript.</p>
-        <div class="flex gap-3 mt-2 flex-wrap">
-          <a href="https://eye-gasto.vercel.app/" target="_blank"
-             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
-            Live Demo
-          </a>
-          <a href="https://github.com/tech1uan/EyeGasto-" target="_blank"
-             class="border border-[#00eaff] text-[#00eaff] font-semibold px-4 py-2 rounded-xl transition hover:bg-[#00eaff] hover:text-black">
-            View Code
-          </a>
+        <div class="flex gap-3 flex-wrap mt-2">
+          <a href="https://eye-gasto.vercel.app/" target="_blank" class="text-sm font-semibold px-4 py-2 rounded-xl transition hover:opacity-80" style="background:var(--cyan);color:black;">Live Demo</a>
+          <a href="https://github.com/tech1uan/EyeGasto-" target="_blank" class="text-sm font-semibold px-4 py-2 rounded-xl transition" style="border:1px solid var(--cyan);color:var(--cyan);" onmouseover="this.style.background='var(--cyan)';this.style.color='black'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">View Code</a>
         </div>
       </div>
     </div>
 
-    <!-- Card 3: Basic Banking App -->
-    <div class="card bg-[#1f2937] w-full shadow-md flex flex-col h-full rounded-xl overflow-hidden">
-      <div class="w-full flex justify-center bg-[#1f2937] pt-8">
-        <img src="ProjectsImages/basic-banking-app.png" alt="Basic Banking App"
-             class="h-44 object-contain" />
+    <div class="bg-[#1f2937] flex flex-col rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+      <div class="flex justify-center items-center h-52 bg-[#1f2937]">
+        <img src="ProjectsImages/basic-banking-app.png" alt="Basic Banking App" class="h-44 object-contain"/>
       </div>
-      <div class="card-body flex flex-col flex-1 p-6 gap-3">
+      <div class="flex flex-col flex-1 gap-3 p-5">
         <div class="flex justify-between items-center gap-2 flex-wrap">
-          <div class="flex gap-2 items-center">
-            <div class="avatar">
-              <div class="w-9 rounded-md">
-                <img src="ProjectsImages/java.png" />
-              </div>
-            </div>
-            <h2 class="card-title text-white text-sm">Basic Banking App</h2>
+          <div class="flex items-center gap-2">
+            <img src="ProjectsImages/java.png" class="w-9 h-9 rounded-md object-cover">
+            <h2 class="text-white font-bold text-sm">Basic Banking App</h2>
           </div>
           <div class="flex flex-wrap gap-1">
-            <div class="badge badge-outline bg-[#E34F26] text-white border-none">Java</div>
-            <div class="badge badge-outline bg-[#1572B6] text-white border-none">Swing</div>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#E34F26] text-white">Java</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#1572B6] text-white">Swing</span>
           </div>
         </div>
         <p class="text-sm text-gray-300 flex-1">Desktop banking app with MPIN login, balance check, and deposit/withdraw functionality. Built with Java Swing.</p>
-        <div class="flex gap-3 mt-2 flex-wrap">
-          <a href="BasicBankApp (JAR)/BasicBankApp.jar" target="_blank"
-             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
-            Download App
-          </a>
-          <a href="https://github.com/tech1uan/Basic_BankingAPP" target="_blank"
-             class="border border-[#00eaff] text-[#00eaff] font-semibold px-4 py-2 rounded-xl transition hover:bg-[#00eaff] hover:text-black">
-            View Code
-          </a>
+        <div class="flex gap-3 flex-wrap mt-2">
+          <a href="BasicBankApp (JAR)/BasicBankApp.jar" target="_blank" class="text-sm font-semibold px-4 py-2 rounded-xl hover:opacity-80 transition" style="background:var(--cyan);color:black;">Download App</a>
+          <a href="https://github.com/tech1uan/Basic_BankingAPP" target="_blank" class="text-sm font-semibold px-4 py-2 rounded-xl transition" style="border:1px solid var(--cyan);color:var(--cyan);" onmouseover="this.style.background='var(--cyan)';this.style.color='black'" onmouseout="this.style.background='transparent';this.style.color='var(--cyan)'">View Code</a>
         </div>
       </div>
     </div>
 
-    <!-- Card 4: Tic Tac Toe -->
-    <div class="card bg-[#1f2937] w-full shadow-md rounded-xl overflow-hidden">
-      <div class="flex justify-center pt-6">
-        <img src="ProjectsImages/tic-tac-toe.png" alt="Tic Tac Toe"
-             class="w-32 h-32 object-contain" />
+    <div class="bg-[#1f2937] flex flex-col rounded-xl overflow-hidden shadow-md" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+      <div class="flex justify-center items-center h-52 bg-[#1f2937]">
+        <img src="ProjectsImages/tic-tac-toe.png" alt="Tic Tac Toe" class="w-32 h-32 object-contain"/>
       </div>
-      <div class="card-body p-6 gap-3">
+      <div class="flex flex-col flex-1 gap-3 p-5">
         <div class="flex justify-between items-center gap-2 flex-wrap">
-          <div class="flex gap-2 items-center">
-            <div class="avatar">
-              <div class="w-9 rounded-md">
-                <img src="ProjectsImages/tic-tac-toe-logo.png" />
-              </div>
-            </div>
-            <h2 class="card-title text-white text-sm">Tic Tac Toe</h2>
+          <div class="flex items-center gap-2">
+            <img src="ProjectsImages/tic-tac-toe-logo.png" class="w-9 h-9 rounded-md object-cover">
+            <h2 class="text-white font-bold text-sm">Tic Tac Toe</h2>
           </div>
           <div class="flex flex-wrap gap-1">
-            <div class="badge badge-outline bg-[#E34F26] text-white border-none">Java</div>
-            <div class="badge badge-outline bg-[#1572B6] text-white border-none">OOP</div>
-            <div class="badge badge-outline bg-[#F7DF1E] text-black border-none">JavaFX</div>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#E34F26] text-white">Java</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#1572B6] text-white">OOP</span>
+            <span class="text-xs font-semibold px-2 py-1 rounded-md bg-[#F7DF1E] text-black">JavaFX</span>
           </div>
         </div>
-        <p class="text-sm text-gray-300 mt-2">Desktop Tic Tac Toe game built with Java and OOP concepts. Features Player vs Player and Player vs AI modes with selectable difficulty, background music, and a clean interface.</p>
-        <div class="flex gap-3 mt-2">
-          <a href="https://github.com/tech1uan/1tech_tic-tac-toe-java" target="_blank"
-             class="bg-[#00eaff] text-black font-semibold px-4 py-2 rounded-xl transition hover:opacity-80">
-            View Code
-          </a>
+        <p class="text-sm text-gray-300 flex-1">Desktop Tic Tac Toe with PvP and PvAI modes, selectable difficulty, background music, and a clean interface.</p>
+        <div class="flex gap-3 flex-wrap mt-2">
+          <a href="https://github.com/tech1uan/1tech_tic-tac-toe-java" target="_blank" class="text-sm font-semibold px-4 py-2 rounded-xl hover:opacity-80 transition" style="background:var(--cyan);color:black;">View Code</a>
         </div>
       </div>
     </div>
@@ -589,391 +431,205 @@
   </div>
 </section>
 
+<section class="vproj-section" style="padding:6rem 2rem;max-width:1100px;margin:auto;">
+  <div class="head-flex-container">
+    <div class="head-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+      <img src="ProjectsImages/videoedit.png" alt="vid-logo">
+      <h1>VIDEO EDITING PROJECTS</h1>
+    </div>
+    <div class="body-container text-center mt-4" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1000">
+      <p>Tool Used: <span style="color:var(--cyan)">Capcut</span></p>
+      <p>Role: <span style="color:var(--cyan)">Video Editor – Group Projects</span></p>
+      <p class="mt-4" style="color:#9ca3af;font-size:0.88rem;">As part of school activities, I edited group video projects using Capcut — applying transitions, text overlays, music syncing, and basic visual effects.</p>
+    </div>
+  </div>
+  <div class="video-flex-container mt-10">
+    <div class="video-container1" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/kZXi6VwZEMQ?rel=0" title="Golden Ours Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="d1">
+        <h4>Project Title: Golden <span class="gold">Ours</span></h4>
+        <p>– A love story through the dreams of schizophrenia. (Gen Bio & Oral Com)</p>
+        <a href="https://youtu.be/kZXi6VwZEMQ?si=3DtSHmU3PI5MgCeY" target="_blank">Preview Project</a>
+      </div>
+    </div>
+    <div class="video-container2" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+      <iframe width="100%" height="auto" src="https://www.youtube.com/embed/Ohe5wzeNkFk?rel=0" title="Tara, Time Travel Tayo!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="d2">
+        <h4>Project Title: Tara, Time Travel Tayo!</h4>
+        <p>– A short vlog for Readings in Philippine History showing local cultural heritage.</p>
+        <a href="https://youtu.be/Ohe5wzeNkFk?si=HZ-hvgE_QkXHIDGP" target="_blank">Preview Project</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-4" id="education">
+  <span class="section-tag">Background</span>
+  <h1 class="section-h1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">EDUCATION</h1>
+  <p class="text-center text-gray-500 text-sm mb-3">College | Senior High School</p>
+  <div class="cyan-line"></div>
+  <div class="Education-Container flex flex-wrap gap-8 justify-center">
+    <div class="Card1" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+      <div class="Card-Inner">
+        <div class="Card-Face Front">
+          <p class="hoverdetail">Hover for details</p>
+          <img src="Education_Images/PITA.png" alt="PITA">
+          <h3 class="school-name">Polytechnic Institute of Tabaco</h3>
+          <p class="course-name">Bachelor of Science in Information Technology</p>
+          <p class="year-level">2nd Year Student</p>
+          <p class="SY">2024 – Present</p>
+        </div>
+        <div class="Card-Face Back">
+          <h1>GWA</h1>
+          <p>First Year: 1.0</p><p>Second Year: Soon</p><p>Third Year: Soon</p><p>Fourth Year: Soon</p>
+        </div>
+      </div>
+    </div>
+    <div class="Card1" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+      <div class="Card-Inner">
+        <div class="Card-Face Front">
+          <p class="hoverdetail">Hover for details</p>
+          <img src="Education_Images/SJNHS.png" alt="SJNHS">
+          <h3 class="school-name">San Jose National High School</h3>
+          <p class="course-name">SHS Strand: STEM</p>
+          <p class="year-level">Graduated</p>
+          <p class="SY">2022 – 2024</p>
+        </div>
+        <div class="Card-Face Back2">
+          <h1 class="Ach">Achievements</h1>
+          <p>Grade 11 – With Honors</p>
+          <p>Grade 12 – With High Honors</p>
+          <p>Work Immersion Awardee (DICT)</p>
+          <p>Outstanding Performance – ARNIS</p>
+          <p>Palarong Pambansa Athlete – ARNIS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-4" id="certificates">
+  <span class="section-tag">Credentials</span>
+  <h1 class="font-['Syne'] font-black text-center mb-1 tracking-wide text-xl md:text-2xl lg:text-4xl" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">COURSE & CERTIFICATION</h1>
+  <div class="cyan-line"></div>
+  <p class="text-center text-gray-400 text-sm max-w-2xl mx-auto mb-16 leading-relaxed">Explore a robust IT skill set cultivated through active learning and practical application — web development, digital competencies, AI, and specialized software.</p>
+
+  <!-- Sliding row -->
+  <div class="mb-16">
+    <h2 class="text-center text-white font-bold mb-6" data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000" style="font-size:1rem;letter-spacing:0.05em;">Practical Experience & Digital Competencies</h2>
+    <div class="overflow-hidden">
+      <div class="certificate-track">
+        <div class="cert"><img src="Certificates_Images/cert1.png"><p><strong>Work Immersion: DICT – Basic Digital Literacy Training (40 hrs)</strong></p></div>
+        <div class="cert"><img src="Certificates_Images/cert2.png"><p><strong>Work Immersion: DICT (80 hrs)</strong></p></div>
+        <div class="cert"><img src="Certificates_Images/cert2b.jpg"><p><strong>Work Immersion Awardee</strong></p></div>
+        <div class="cert"><img src="Certificates_Images/aideas-hackathon-cert.jpg"><p><strong>AIDEASDICT Hackathon, Naga City – Certificate of Participation (2025)</strong></p></div>
+        <!-- Duplicates for seamless loop -->
+        <div class="cert"><img src="Certificates_Images/cert1.png"><p><strong>Work Immersion: DICT – Basic Digital Literacy Training (40 hrs)</strong></p></div>
+        <div class="cert"><img src="Certificates_Images/cert2.png"><p><strong>Work Immersion: DICT (80 hrs)</strong></p></div>
+        <div class="cert"><img src="Certificates_Images/cert2b.jpg"><p><strong>Work Immersion Awardee</strong></p></div>
+        <div class="cert"><img src="Certificates_Images/aideas-hackathon-cert.jpg"><p><strong>AIDEASDICT Hackathon, Naga City – Certificate of Participation (2025)</strong></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="max-w-3xl mx-auto flex flex-col gap-14">
+    <div>
+      <h2 class="text-white font-bold text-center mb-6" style="font-size:1rem;">Web Development & Design</h2>
+      <div class="flex justify-center">
+        <div class="cert"><img src="Certificates_Images/cert3.jpg"><p>Responsive Web Design Certification (freeCodeCamp)</p><a id="verify-button" href="https://www.freecodecamp.org/certification/jmaustria/responsive-web-design" target="_blank">Verify Certificate</a></div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-white font-bold text-center mb-6" style="font-size:1rem;">Specialized Development & Career Insights</h2>
+      <div class="flex flex-wrap gap-6 justify-center">
+        <div class="cert"><img src="Certificates_Images/cert5.jpg"><p>UI/UX Design & IT Careers</p></div>
+        <div class="cert"><img src="Certificates_Images/cert6.jpg"><p>Game Development Basics</p></div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-white font-bold text-center mb-6" style="font-size:1rem;">Emerging Technologies & Innovation</h2>
+      <div class="flex flex-wrap gap-6 justify-center">
+        <div class="cert"><img src="Certificates_Images/cert7.jpg"><p>Cloud Computing & Coding</p></div>
+        <div class="cert"><img src="Certificates_Images/cert8.jpg"><p>AI for Productivity & Mindset</p></div>
+      </div>
+    </div>
+    <div>
+      <h2 class="text-white font-bold text-center mb-6" style="font-size:1rem;">Athletic Achievements & Transferable Skills</h2>
+      <div class="flex flex-wrap gap-6 justify-center items-start">
+        <div class="cert"><img src="Certificates_Images/cert9.png"></div>
+        <div class="cert"><img src="Certificates_Images/cert10.png"></div>
+      </div>
+      <p class="text-center mt-4" style="color:#9ca3af;font-size:0.85rem;">Palarong Bicol 2024 – Arnis Gold Medalist & Champion<br>Palarong Pambansa Qualifier</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 px-4" id="contact-me">
+  <span class="section-tag">Get in Touch</span>
+  <h1 class="section-h1" data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">Contact Me</h1>
+  <p class="text-center text-gray-400 text-sm mb-3">Reach out via form, social media, or support platforms</p>
+  <div class="cyan-line"></div>
+  <div class="Main-Container">
+    <div class="socmed-container flex flex-col gap-3" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+      <a href="https://github.com/jmwanny" target="_blank" style="text-decoration:none;">
+        <div class="Github"><img src="Contact_Images/github.gif" alt="Github"><div><p class="Title">Github</p><div class="text-with-arrow"><p class="Text">Explore my code & projects</p><span class="symbolA">&#8594;</span></div></div></div>
+      </a>
+      <a href="https://www.facebook.com/juanmiguel.austria.5" target="_blank" style="text-decoration:none;">
+        <div class="Facebook"><img src="Contact_Images/fb.gif" alt="Facebook"><div><p class="Title">Facebook</p><div class="text-with-arrow"><p class="Text">Stay updated & connect with me</p><span class="symbolB">&#8594;</span></div></div></div>
+      </a>
+      <a href="https://www.linkedin.com/in/juan-miguel-austria-917583375" target="_blank" style="text-decoration:none;">
+        <div class="LinkedIn"><img src="Contact_Images/linkedin.gif" alt="LinkedIn"><div><p class="Title">LinkedIn</p><div class="text-with-arrow"><p class="Text">Connect with me professionally</p><span class="symbolC">&#8594;</span></div></div></div>
+      </a>
+      <a href="https://www.instagram.com/astrwnnyy_?igsh=MXZoOGdoeWI2bDY3dA==" target="_blank" style="text-decoration:none;">
+        <div class="Instagram"><img src="Contact_Images/instag.gif" alt="Instagram"><div><p class="Title">Instagram</p><div class="text-with-arrow"><p class="Text">Follow my visual journey</p><span class="symbolD">&#8594;</span></div></div></div>
+      </a>
+      <a href="https://x.com/wannytw_?t=wLo57epXozGlmD5AhHULHQ&s=09" target="_blank" style="text-decoration:none;">
+        <div class="X"><img src="Contact_Images/X.gif" alt="X"><div><p class="Title">X</p><div class="text-with-arrow"><p class="Text">Follow my thoughts on tech & coding</p><span class="symbolE">&#8594;</span></div></div></div>
+      </a>
+    </div>
+
+    <div class="form-container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
+      <h2 class="text-white font-bold text-xl mb-5" style="font-family:'Syne',sans-serif;">&#9993; Send Me a Message</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="4503db1b-7fd6-49dc-afcb-cf654841af88">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button class="Send" type="submit">Send &#10148;</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="footer_container">
+    <img src="Footer_Images/Jm_Logo.png" class="jm">
+    <a href="#home" style="color:var(--cyan);font-size:0.85rem;text-decoration:none;"><span id="arrow-up">&#x2191;</span> Back to Top</a>
+    <div class="socials_footer">
+      <a href="https://www.facebook.com/juanmiguel.austria.5" target="_blank"><img src="Contact_Images/fb.gif" alt="Facebook"></a>
+      <a href="https://www.instagram.com/astrwnnyy_?igsh=MXZoOGdoeWI2bDY3dA==" target="_blank"><img src="Contact_Images/instag.gif" alt="Instagram"></a>
+      <a href="https://github.com/jmwanny" target="_blank"><img src="Contact_Images/github.gif" alt="Github"></a>
+      <a href="https://x.com/wannytw_?t=wLo57epXozGlmD5AhHULHQ&s=09" target="_blank"><img src="Contact_Images/X.gif" alt="X"></a>
+      <a href="https://www.linkedin.com/in/juan-miguel-austria-917583375" target="_blank"><img src="Contact_Images/linkedin.gif" alt="LinkedIn"></a>
+    </div>
+    <div class="contact flex flex-col gap-1">
+      <p><span class="symbol">&#9993;</span>juanmiguelaus2@gmail.com</p>
+      <p><span class="symbol">&#9742;</span>+63 965 742 8033</p>
+    </div>
+    <div class="last-text w-full">
+      <hr class="line">
+      <p>Designed by Juan Miguel Austria, an aspiring Web Developer</p>
+      <p>© 2025 Juan Miguel Austria. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src = "script.js">
  
-    <section class="vproj-section">
-      <div class="head-flex-container">
-        <div class="head-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          <img src="ProjectsImages/videoedit.png" alt="vid-logo">
-          <h1>VIDEO EDITING PROJECTS</h1>
-        </div>
-        <br>
-        <div class="body-container" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          <p>Tool Used: Capcut</p><br>
-          <p>Role: Video Editor - Group Projects</p> <br>
-          <br>
-          <p>As part of school activities, I edited group video projects using Capcut — applying transitions, text
-            overlays, music syncing,
-            and basic visual effects. Below is a full showcase of some of my editing works. </p>
-        </div>
-      </div>
-      <div class="video-flex-container">
-        <div class="video-container1" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/kZXi6VwZEMQ?rel=0"
-            title="Golden Ours Trailer" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-          <div class="d1">
-            <h4>Project Title: Golden <span class="gold"> Ours </span><br><span class="project-info"></h4>
-
-            <p> – A love story through the dreams of schizophrenia. (Gen Bio & Oral Com)</span></p>
-
-            <a href="https://youtu.be/kZXi6VwZEMQ?si=3DtSHmU3PI5MgCeY" target="_blank">Preview Project</a>
-          </div>
-        </div>
-
-        <div class="video-container2" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-          <iframe width="100%" height="auto" src="https://www.youtube.com/embed/Ohe5wzeNkFk?rel=0"
-            title="Tara, Time Travel Tayo!" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-          <div class="d2">
-            <h4>Project Title: Tara, Time Travel Tayo! <br></h4>
-            <p><span class="project-info">– A short vlog for Readings in Philippine History showing local cultural
-                heritage.</span> </p>
-            <a href="https://youtu.be/Ohe5wzeNkFk?si=HZ-hvgE_QkXHIDGP" target="_blank">Preview Project</a>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-    <section class="Education-Section" id="education">
-      <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">EDUCATION</h1>
-      <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">College | Senior High School</p>
-      <div class="Education-Container">
-        <div class="Card1" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-          <div class="Card-Inner">
-            <div class="Card-Face Front">
-              <p class="hoverdetail">Hover for details</p>
-              <img src="Education_Images/PITA.png" alt="PITA">
-              <h3 class="school-name">Polytechnic Institute of Tabaco</h3>
-              <p class="course-name">Bachelor of Science in Information Technology</p>
-              <p class="year-level">2nd Year Student</p>
-              <p class="SY"> 2024 - Present</p>
-            </div>
-            <div class="Card-Face Back">
-              <h1>GWA</h1>
-              <P>First Year: 1.0</P>
-              <P>Second Year: Soon</P>
-              <P>Third Year: Soon</P>
-              <P>Fourth Year: Soon</P>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="Card1" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-          <div class="Card-Inner">
-            <div class="Card-Face Front">
-              <p class="hoverdetail">Hover for details</p>
-              <img src="Education_Images/SJNHS.png" alt="PITA">
-              <h3 class="school-name">San Jose National High School</h3>
-              <p class="course-name">SHS Strand: Science, Technology, Engineering, and Mathematics</p>
-              <p class="year-level">Graduated</p>
-              <p class="SY"> 2022 - 2024 </p>
-            </div>
-            <div class="Card-Face Back2">
-              <h1 class="Ach">Achievements</h1>
-              <P>Grade 11 - With Honors</P>
-              <p>Grade 12 - With High Honors</p>
-              <p>Work Immersion Awardee (Partnered by DICT)</p>
-              <p>Outstanding Performance in Specific Disciplines(ARNIS)
-              <p>Palarong Pambansa Athlete (ARNIS)</p>
-              </p>
-              <p></p>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-    <section class="Certificates-Section" id="certificates">
-      <div class="text1-container-flex">
-        <div class="Text1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-          <h1>COURSE AND CERTIFICATION</h1>
-          <p>Explore a robust IT skill set cultivated through active learning and practical application.
-            This section showcases my expertise in web development, essential digital competencies, and
-            forward-thinking areas like AI, specialized software, and network fundamentals.
-            My proven discipline and resilience, honed through high-level sports achievements, ensure I am a highly
-            adaptable and committed professional ready to deliver impactful results.</p>
-        </div>
-      </div>
-      <div class="certificates-container-flex">
-        <div class="Certificate-Cat1">
-          <h2 data-aos="fade-in" data-aos-delay="200" data-aos-duration="1000">Practical Experience & Digital
-            Competencies (2)</h2>
-
-          <div class="certificate-slider-wrapper">
-            <div class="certificate-track">
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert1.png">
-                <p><strong>Work Immersion: DICT - Basic Digital <br>Literacy Training (40 Hours)</strong></p>
-              </div>
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert2.png">
-                <p><strong>Work Immersion: DICT (80 hours)</strong></p>
-              </div>
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert2b.jpg" id="cert2b">
-                <p><strong>Work Immersion Awardee</strong></p>
-              </div>
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/aideas-hackathon-cert.jpg" id="cert2b">
-                <p><strong>AIDEASDICT Hackathon, Naga City – Certificate of Participation (2025)</strong></p>
-              </div>
-
-              <!--Duplicate Certs for Carousel Animation-->
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert1.png">
-                <p><strong>Work Immersion: DICT - Basic Digital <br>Literacy Training (40 Hours)</strong></p>
-              </div>
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert2.png">
-                <p><strong>Work Immersion: DICT (80 hours)</strong></p>
-              </div>
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert2b.jpg" id="cert2b">
-                <p><strong>Work Immersion Awardee</strong></p>
-              </div>
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/aideas-hackathon-cert.jpg" id="cert2b">
-                <p><strong>AIDEASDICT Hackathon, Naga City – Certificate of Participation (2025)</strong></p>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="Certificate-Cat1" id="certificates">
-        <h2 data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">Web Development & Design (2)</h2>
-        <div class="certificate-grid2">
-          <div class="cert" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-            <img src="Certificates_Images/cert3.jpg">
-            <p>Responsive Web Design Certification (freeCodeCamp)</p>
-            <a id="verify-button" href="https://www.freecodecamp.org/certification/jmaustria/responsive-web-design"
-              target="_blank" rel="noopener noreferrer">Verify Certificate</a>
-          </div>
-
-        </div>
-
-
-        <div class="Certificate-Cat1" id="certificates">
-          <h2 data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">Specialized Development & Career Insights
-            (2)</h2>
-          <div class="certificate-slider-wrapper">
-            <div class="certificate-grid2">
-              <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert5.jpg">
-                <p>UI/UX Design & IT Careers</p>
-              </div>
-              <div class="cert" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-                <img src="Certificates_Images/cert6.jpg">
-                <p>Game Development Basics</p>
-              </div>
-            </div>
-          </div>
-
-
-          <div class="Certificate-Cat1" id="certificates">
-            <h2 data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">Emerging Technologies & Innovation (2)
-            </h2>
-            <div class="certificate-slider-wrapper">
-              <div class="certificate-grid2">
-                <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                  <img src="Certificates_Images/cert7.jpg">
-                  <p>Cloud Computing & Coding</p>
-                </div>
-                <div class="cert" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-                  <img src="Certificates_Images/cert8.jpg">
-                  <p>AI for Productivity & Mindset</p>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="Certificate-Cat1" id="certificates">
-              <h2 data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">Athletic Achievements & Transferable
-                Skills (2)</h2>
-              <div class="certificate-slider-wrapper">
-                <div class="certificate-grid3">
-                  <div class="cert-pics">
-                    <div class="cert" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-                      <img src="Certificates_Images/cert9.png">
-                    </div>
-                    <div class="cert" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-                      <img src="Certificates_Images/cert10.png">
-                    </div>
-                  </div>
-                  <p id="sports-text" data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">Palarong Bicol
-                    2024 - Arnis Gold Medalist & Champion <br>
-                    Palarong Pambansa Qualifier</p>
-                </div>
-              </div>
-            </div>
-
-
-    </section>
-
-    <section class="Contact-Me" id="contact-me">
-      <div class="contact-me-header" data-aos="fade-in" data-aos-delay="100" data-aos-duration="1000">
-        <h1>Contact Me</h1>
-        <p>Reach out via form, social media, or support
-          platforms</p>
-      </div>
-      <div class=Main-Container>
-        <div class="socmed-container" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
-          <a href="https://github.com/jmwanny" target="_blank" style="text-decoration:none;">
-            <div class="Github">
-              <img src="Contact_Images/github.gif" alt="Github">
-              <div class="Github-Text">
-                <p class="Title">Github</p>
-                <div class="text-with-arrow">
-                  <p class="Text">Explore my code & projects</p>
-                  <span class="symbolA">&#8594;</span>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="https://www.facebook.com/juanmiguel.austria.5" target="_blank" style="text-decoration:none;">
-            <div class="Facebook">
-              <img src="Contact_Images/fb.gif" alt="Github">
-              <div class="Facebook-Text">
-                <p class="Title">Facebook</p>
-                <div class="text-with-arrow">
-                  <p class="Text">Stay updated & connect with me</p>
-                  <span class="symbolB">&#8594;</span>
-                </div>
-              </div>
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/juan-miguel-austria-917583375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            target="_blank" style="text-decoration:none;">
-            <div class="LinkedIn">
-              <img src="Contact_Images/linkedin.gif" alt="LinkedIn">
-              <div class="LinkedIn-Text">
-                <p class="Title">LinkedIn</p>
-                <div class="text-with-arrow">
-                  <p class="Text">Connect with me professionally</p>
-                  <span class="symbolC">&#8594;</span>
-                </div>
-              </div>
-            </div>
-
-          </a>
-          <a href="https://www.instagram.com/astrwnnyy_?igsh=MXZoOGdoeWI2bDY3dA==" target="_blank"
-            style="text-decoration:none;">
-            <div class="Instagram">
-              <img src="Contact_Images/instag.gif" alt="Instagram">
-              <div class="Instagram-Text">
-                <p class="Title">Instagram</p>
-                <div class="text-with-arrow">
-                  <p class="Text">Follow my visual journey</p>
-                  <span class="symbolD">&#8594;</span>
-                </div>
-              </div>
-            </div>
-
-          </a>
-          <a href="https://x.com/wannytw_?t=wLo57epXozGlmD5AhHULHQ&s=09" target="_blank" style="text-decoration:none;">
-            <div class="X">
-              <img src="Contact_Images/X.gif" alt="X">
-              <div class="X-Text">
-                <p class="Title">X</p>
-                <div class="text-with-arrow">
-                  <p class="Text">Follow my thoughts on tech, coding, and IT trends</p>
-                  <span class="symbolE">&#8594;</span>
-                </div>
-              </div>
-            </div>
-
-          </a>
-        </div>
-        <div class="form-container" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1000">
-          <h1><span class="message-icon">&#9993;</span>Send Me a Message</h1>
-          <div class="form">
-            <div class="Name">
-              <form action="https://api.web3forms.com/submit" method="POST">
-                <input type="hidden" name="access_key" value="4503db1b-7fd6-49dc-afcb-cf654841af88">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-            </div>
-            <div class="Email">
-              <input type="email" id="email" name="email" placeholder="Your Email" required>
-            </div>
-            <div class="Message">
-              <textarea placeholder="Your Message" name="message" required></textarea>
-            </div>
-            <button class="Send">Send &#10148;</button>
-            </form>
-
-
-          </div>
-        </div>
-      </div>
-      </div>
-
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="footer_container">
-      <img src="Footer_Images/Jm_Logo.png" class="jm">
-
-      <div class="text">
-        <a href="#home"><span id="arrow-up">&#x2191;</span>Back to Top </a>
-      </div>
-      <div class="socials_footer">
-
-        <a href="https://www.facebook.com/juanmiguel.austria.5" target="_blank">
-          <img src="Contact_Images/fb.gif" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/astrwnnyy_?igsh=MXZoOGdoeWI2bDY3dA==" target="_blank">
-          <img src="Contact_Images/instag.gif" alt="Instagram">
-        </a>
-        <a href="https://github.com/jmwanny" target="_blank">
-          <img src="Contact_Images/github.gif" alt="Github">
-
-        </a>
-        <a href="https://x.com/wannytw_?t=wLo57epXozGlmD5AhHULHQ&s=09" target="_blank">
-          <img src="Contact_Images/X.gif" alt="X">
-
-        </a>
-        <a href="https://www.linkedin.com/in/juan-miguel-austria-917583375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-          target="_blank">
-          <img src="Contact_Images/linkedin.gif" alt="X">
-        </a>
-      </div>
-
-
-      <div class="contact">
-        <p><span class="symbol">&#9993</span>juanmiguelaus2@gmail.com</p>
-        <p><span class="symbol">&#9742</span>+63 965 742 8033</p>
-      </div>
-      <div class="last-text">
-        <hr class="line">
-        <p>Designed by Juan Miguel Austria, an aspiring Web Developer</p>
-        <p> © 2025 Juan Miguel Austria. All rights reserved.</p>
-      </div>
-
-
-    </div>
-
-    </div>
-    </div>
-
-  </footer>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="JM_Portfolio.js"></script>
-
+</script>
 </body>
-
-
 </html>

@@ -1,0 +1,17 @@
+{
+  "name": "jm_webportfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "JM_Portfolio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.2.0",
+    "daisyui": "^5.5.18"
+  }
+}
